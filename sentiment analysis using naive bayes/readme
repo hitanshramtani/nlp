@@ -1,0 +1,37 @@
+💬 Naive Bayes Sentiment Analysis with Tweets
+This project implements a Naive Bayes classifier to perform sentiment analysis on tweets. It classifies tweets as positive or negative, based on the words they contain.
+
+📚 Overview
+This project includes the following key components:
+
+Data Preprocessing
+Tokenization and cleaning of tweet text.
+
+Frequency Dictionary (freqs)
+A dictionary of word-label pairs (e.g., ('happy', 1)) with their frequency counts.
+
+Training the Naive Bayes Model
+
+Calculates:
+
+Vocabulary size V
+
+Positive and negative word counts N_pos, N_neg
+
+Document counts D, D_pos, D_neg
+
+Log Prior: logprior = log(D_pos / D_neg)
+
+Log Likelihood for each word
+
+Prediction
+
+Computes the sum of log likelihoods + logprior to predict tweet sentiment.
+
+Evaluation
+
+Accuracy of the model on test data.
+
+Word Ratio Analysis
+
+Computes how strongly a word is associated with positive or negative sentiment
