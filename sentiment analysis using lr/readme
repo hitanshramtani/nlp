@@ -1,0 +1,14 @@
+# 🧠 Sentiment Analysis using Logistic Regression
+
+This project implements a simple **Sentiment Analysis** model using **Logistic Regression** from scratch in Python. The model classifies tweets as **positive** or **negative** based on word frequencies and logistic regression.
+
+## 📌 Project Highlights
+
+- Text preprocessing using stemming, tokenization, and stopword removal.
+- Feature extraction using word frequencies.
+- Logistic Regression implementation from scratch (no sklearn).
+- Model training using gradient descent.
+- Evaluation of model accuracy on test data.
+
+# Main File
+- C1_W1_Assignment.ipynb: The main Jupyter notebook containing the implementation of the sentiment analysis model.
