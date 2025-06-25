@@ -1,0 +1,64 @@
+# Week 3: Vector Space Models – NLP Specialization
+
+This repository contains my completed work for **Week 3** of the NLP course, covering **Vector Space Models**. It includes videos, readings, interactive labs, and a graded final assignment. All labs and assignments were implemented using Python and Numpy.
+
+---
+
+## 📚 Topics Covered
+
+### 🔸 Vector Space Models
+- Understanding words as vectors in high-dimensional spaces
+- Word-Word and Word-Document co-occurrence matrices
+- Introduction to dense word embeddings
+
+### 🔸 Linear Algebra Foundations
+- Matrix operations with NumPy
+- Mean centering, dot products
+- Cosine similarity vs Euclidean distance
+
+### 🔸 Word Similarity
+- Calculating cosine similarity between word vectors
+- Finding relationships like `King - Man + Woman ≈ Queen`
+
+### 🔸 Word Embedding Manipulation
+- Vector arithmetic for word analogies
+- Embedding subset selection using `gensim` + `nltk`
+
+### 🔸 Dimensionality Reduction & PCA
+- Understanding Principal Component Analysis (PCA)
+- Reducing 300D word embeddings to 2D for visualization
+- Efficient PCA using SVD
+
+---
+
+## 🧪 Labs Completed
+
+| Lab | Description |
+|-----|-------------|
+| Euclidean Distance | Implemented Euclidean distance for word vectors |
+| Cosine Similarity | Calculated cosine similarity manually using NumPy |
+| Manipulating Word Embeddings | Performed vector arithmetic and analogies |
+| Visualization & PCA | Implemented PCA (eigen and SVD approaches) for word embedding reduction |
+
+---
+
+## 📈 Final Graded Assignment: Vector Space Models
+- ✅ **Submitted**
+- 🏆 **Grade: 80%**
+- Implemented the full pipeline:
+  - Loading and filtering word embeddings
+  - Calculating cosine similarity
+  - Predicting analogies like `"Athens - Greece + France ≈ Paris"`
+  - Computing PCA to visualize embedding spaces
+
+---
+
+## 🛠 Technologies Used
+- Python 3
+- NumPy
+- Pandas
+- Matplotlib (for optional visualization)
+- Gensim (for loading pre-trained word vectors)
+- NLTK (for tokenization)
+
+---
