@@ -1,0 +1,14 @@
+# 📝 Automated Spelling Corrector
+
+A Python-based spelling correction tool that uses edit distance algorithms and word probabilities to suggest the most likely correct versions of misspelled words.
+
+## 🔧 Features
+
+- Suggests corrections for misspelled words using:
+  - Edit distance (1 or 2 edits away)
+  - Word replacement, insertion, deletion, and transposition
+- Uses a vocabulary and word frequency probabilities to rank suggestions
+- Implements Minimum Edit Distance (MED) using dynamic programming
+- Designed with unit-testable components
+
+---

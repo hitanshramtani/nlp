@@ -1,0 +1,62 @@
+# 📚 Weekly Learning Summary: Autocorrect System with Word Probabilities & Edit Distance
+
+This week, I explored the foundational concepts behind building an intelligent **autocorrect system**. The key areas of focus were:
+
+---
+
+## 🔡 Word Probabilities
+
+- Learned how to build a **vocabulary** from a corpus using tokenization.
+- Calculated the **probability of each word** based on frequency:
+  \[
+  P(w) = \frac{\text{count}(w)}{\text{total words}}
+  \]
+- These probabilities help rank suggested corrections by how commonly they occur in real usage.
+
+---
+
+## 🧠 Dynamic Programming
+
+- Applied dynamic programming to solve optimization problems like **Minimum Edit Distance** efficiently.
+- Used a matrix-based approach to avoid redundant calculations.
+- Key operations handled:
+  - **Insertion**
+  - **Deletion**
+  - **Replacement**
+
+---
+
+## ✏️ Minimum Edit Distance
+
+- Implemented an algorithm to calculate the **minimum number of edits** required to transform one word into another.
+- Each operation (insert, delete, replace) is assigned a cost.
+- Developed a dynamic programming table to compute the cost step by step.
+
+Formula used:
+\[
+D[i,j] = \min \begin{cases}
+D[i-1,j] + \text{del\_cost} \\
+D[i,j-1] + \text{ins\_cost} \\
+D[i-1,j-1] + \begin{cases}
+0, & \text{if source[i] == target[j]} \\
+\text{rep\_cost}, & \text{otherwise}
+\end{cases}
+\end{cases}
+\]
+
+---
+
+## 🤖 Autocorrect System
+
+- Combined all components to build a basic **autocorrect engine**.
+- Key features:
+  - Generates candidate corrections using 1 or 2 edit operations.
+  - Filters candidates using a valid vocabulary.
+  - Ranks results by word probability.
+  - Returns the most likely suggestions.
+
+Example:
+```python
+Input:  "dys"
+Suggestions: ['days', 'dye']
+Best match: 'days'
