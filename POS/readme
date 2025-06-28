@@ -1,0 +1,84 @@
+# 📘 Weekly Learning Summary: Hidden Markov Models & POS Tagging
+
+## 📌 Learning Objectives
+
+### 1. **Markov Chains**
+
+A **Markov chain** is a stochastic model describing a sequence of events where the probability of each event depends only on the state attained in the previous event.
+
+#### 🔢 Mathematical Definition:
+
+If $X_1, X_2, ..., X_n$ is a sequence of random variables, the Markov property states:
+
+$$
+P(X_n = x_n \mid X_{n-1} = x_{n-1}, ..., X_1 = x_1) = P(X_n = x_n \mid X_{n-1} = x_{n-1})
+$$
+
+---
+
+### 2. **Hidden Markov Models (HMMs)**
+
+A **Hidden Markov Model** is a statistical model where the system is assumed to follow a Markov process with hidden states. It is widely used in sequential data like speech, text, and bioinformatics.
+
+#### Components:
+
+* **States** $S = \{s_1, s_2, ..., s_N\}$
+* **Observations** $O = \{o_1, o_2, ..., o_T\}$
+* **Transition probabilities** $A = [a_{ij}]$
+* **Emission probabilities** $B = [b_j(o_t)]$
+* **Initial state distribution** $\pi = [\pi_i]$
+
+---
+
+### 3. **Part-of-Speech (POS) Tagging**
+
+**POS tagging** assigns each word in a sentence its correct part of speech (e.g., noun, verb, adjective). Using HMM, POS tags are hidden states and words are the observed sequence.
+
+---
+
+### 4. **Viterbi Algorithm**
+
+The **Viterbi algorithm** is a dynamic programming algorithm used to find the most probable sequence of hidden states (tags) given an observed sequence (words).
+
+#### 🔢 Recurrence Relation:
+
+Let:
+
+* $\delta_t(j)$: highest probability of any path ending in state $j$ at time $t$
+* $a_{ij}$: transition probability from state $i$ to $j$
+* $b_j(o_t)$: emission probability of observation $o_t$ from state $j$
+
+$$
+\delta_t(j) = \max_i \left[ \delta_{t-1}(i) \cdot a_{ij} \cdot b_j(o_t) \right]
+$$
+
+---
+
+### 5. **Transition Probabilities**
+
+These represent the probability of moving from one state (POS tag) to another.
+
+#### Formula with Smoothing:
+
+$$
+a_{ij} = \frac{\text{count}(s_i \rightarrow s_j) + \alpha}{\text{count}(s_i) + \alpha \cdot N}
+$$
+
+* $N$: number of unique tags
+* $\alpha$: smoothing factor
+
+---
+
+### 6. **Emission Probabilities**
+
+These define the likelihood of observing a word given a POS tag.
+
+#### Formula with Smoothing:
+
+$$
+b_j(o_t) = \frac{\text{count}(s_j \rightarrow o_t) + \alpha}{\text{count}(s_j) + \alpha \cdot V}
+$$
+
+* $V$: vocabulary size
+
+---
