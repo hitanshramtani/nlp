@@ -1,0 +1,118 @@
+# Language Modeling Assignment
+
+## 📘 Overview
+
+This project focuses on building and evaluating a statistical language model using **N-Grams**. You'll explore the estimation of sentence probabilities, handle unknown words, and apply smoothing techniques to improve model performance.
+
+---
+
+## 📚 Concepts Covered
+
+- **N-Grams and Probabilities**  
+  Calculate unigram, bigram, and trigram probabilities.
+
+- **Approximate Sentence Probability**  
+  Use N-Gram models to estimate the likelihood of sentences.
+
+- **Building a Language Model**  
+  Train language models from a corpus using N-Gram statistics.
+
+- **Fixing Missing Information**  
+  Address incomplete N-Grams through smoothing techniques.
+
+- **Out-of-Vocabulary Words (`<UNK>`)**  
+  Replace rare or unknown tokens with `<UNK>`.
+
+- **Smoothing, Backoff, and Interpolation**  
+  Implement:
+  - Laplace (Add-One) Smoothing  
+  - Backoff strategies  
+  - Interpolation techniques
+
+- **Evaluation with Perplexity**  
+  Measure model performance using perplexity scores.
+
+---
+
+## 📘 Overview
+
+This project demonstrates how to build a statistical language model using **N-Grams** from a corpus. It covers computing sentence probabilities, handling unknown words, applying smoothing techniques, and evaluating the model using perplexity.
+
+---
+
+## 📚 Key Concepts and Simple Definitions
+
+### 🔢 1. N-Grams and Probabilities
+An **N-Gram** is a sequence of N words.  
+- **Unigram**: 1 word (e.g., "language")  
+- **Bigram**: 2 words (e.g., "language model")  
+- **Trigram**: 3 words (e.g., "build a model")  
+
+These help compute how likely a word is to follow another.
+
+---
+
+### 📏 2. Approximate Sentence Probability from N-Grams
+We estimate the probability of a sentence using N-Grams.  
+Example (Bigram Model):  
+`P("I love NLP") ≈ P(I) * P(love | I) * P(NLP | love)`
+
+---
+
+### 🏗️ 3. Build a Language Model from a Corpus
+A **language model** assigns probabilities to sequences of words.  
+We build it by:
+- Counting N-Grams in a **corpus** (text dataset)
+- Calculating probabilities from these counts
+
+---
+
+### ⚠️ 4. Fix Missing Information
+Some word combinations might not appear in the training data.  
+We **fix this** so the model doesn't assign zero probability by using:
+- Smoothing
+- Backoff
+- Interpolation
+
+---
+
+### ❓ 5. Out-of-Vocabulary (OOV) Words with `<UNK>`
+Words not seen in training are called **out-of-vocabulary**.  
+We replace them with a special token: `<UNK>` (unknown word)  
+This helps the model handle new words in test data.
+
+---
+
+### 🛠️ 6. Missing N-Gram Handling with:
+#### 🔹 Smoothing
+Adds a small count (e.g., +1) to all possible N-Grams to avoid zero probability.  
+**Example**: Laplace Smoothing
+
+#### 🔹 Backoff
+If a higher-order N-Gram is missing, **fall back** to a lower-order one.  
+(e.g., Use bigram if trigram is missing)
+
+#### 🔹 Interpolation
+**Combine** probabilities from multiple N-Gram models (e.g., trigram + bigram + unigram) using weighted averages.
+
+---
+
+### 📊 7. Evaluate Language Model with Perplexity
+**Perplexity** measures how well the model predicts a sample of text.  
+- **Lower perplexity = better model**
+- Think of it as the model’s “surprise level” on new data.
+
+Formula:  
+Perplexity = (1 / P(sentence))^(1/N)
+
+---
+
+## 🛠️ Features
+
+- Tokenization and preprocessing
+- Support for unigram, bigram, and trigram models
+- Rare word handling with `<UNK>`
+- Add-One Smoothing
+- Backoff and interpolation methods
+- Perplexity-based evaluation
+---

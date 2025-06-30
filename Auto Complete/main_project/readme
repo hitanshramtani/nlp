@@ -1,0 +1,12 @@
+# 🔡 N-Gram Autocomplete System
+
+This project implements a simple yet effective **autocomplete system** using **N-Gram Language Models**. It suggests the most probable next word based on a given input sequence, trained on tokenized sentences.
+
+---
+
+## 🚀 Features
+
+- Predict the next word using n-gram context (n ≥ 1)
+- Handles unseen words via `<unk>` token
+- Supports prefix filtering (e.g., suggest words starting with `"ca"`)
+- Additive (Laplace) smoothing to handle sparse data
