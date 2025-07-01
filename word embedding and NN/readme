@@ -1,0 +1,60 @@
+# Word Embeddings with Neural Networks - Week Overview
+
+## 📚 Course Overview
+
+This week focused on understanding how **word embeddings** help capture the semantic meaning of words in NLP tasks. You explored fundamental and advanced techniques in **word representation**, implemented the **Continuous Bag-of-Words (CBOW)** model, and learned to evaluate the quality of word embeddings.
+
+You now have the foundational tools to begin working with powerful AI libraries in the next modules.
+
+---
+
+## ✅ Topics Covered
+
+### 🔹 1. Data Preparation
+- Importance of data preprocessing in NLP
+- Cleaning and tokenization
+- Sliding window of words in Python
+- Transforming words into vectors
+
+### 🔹 2. Word Representations
+- Basic one-hot encoding vs. distributed representations
+- Introduction to word embeddings
+- Comparison of embedding methods
+
+### 🔹 3. Continuous Bag-of-Words (CBOW) Model
+- CBOW architecture and components
+- Context-target relationships
+- Understanding dimensionality in the model
+- Activation functions used in CBOW
+
+### 🔹 4. Training the CBOW Model
+- Cost function for CBOW
+- Forward and backward propagation
+- Gradient descent for learning embeddings
+
+### 🔹 5. Evaluation of Word Embeddings
+- **Intrinsic Evaluation**: Assessing semantic similarity
+- **Extrinsic Evaluation**: Evaluating downstream task performance
+- Extracting and interpreting embedding vectors
+
+---
+
+## 🧪 Labs & Practical Work
+
+- **Lecture Notebook - Data Preparation**
+- **Intro to CBOW Model**
+- **Training the CBOW Model**
+- **Word Embeddings - Step-by-step Implementation**
+
+---
+
+## 🎉 Conclusion
+
+With a strong grasp on how to:
+- Represent text numerically,
+- Train basic word embedding models from scratch,
+- Evaluate their quality effectively,
+
+...you’re now prepared to move into more advanced NLP using neural networks and state-of-the-art AI libraries. Great work this week!
+
+---
